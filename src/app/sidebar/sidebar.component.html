@@ -62,17 +62,26 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
+          <ul
+            class="nav nav-treeview {{
+              moduleName == 'dashboard' ? 'menu-open' : ''
+            }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }}"
+          >
             <li class="nav-item">
-              <a href="./index.html" class="nav-link active">
+              <a href="./index.html" class="nav-link {{
+                moduleName == 'dashboard' ? 'active' : ''
+              }} {{ moduleName == 'dashboard2' ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Dashboard v1</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="./index2.html" class="nav-link">
+              <a
+                href="/mahasiswa"
+                class="nav-link {{ moduleName == 'mahasiswa' ? 'active' : '' }}"
+              >
                 <i class="far fa-circle nav-icon"></i>
-                <p>Dashboard v2</p>
+                <p>Mahasiswa</p>
               </a>
             </li>
             <li class="nav-item">
